@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
 gulp.task('styles', function() {
 
-	return gulp.src('Src/*.scss')
+	return gulp.src('Src/Scss/*.scss')
 		.pipe(sass({
 			'sourcemap=none': true,
 			 errLogToConsole: true
@@ -16,7 +16,7 @@ gulp.task('styles', function() {
 	        message: "<%= error.message %>"
 	    }))
 		.pipe(concat('main.css'))
-		.pipe(gulp.dest('Prod/'));
+		.pipe(gulp.dest('Prod/css/'));
 
 });
 
@@ -28,6 +28,6 @@ gulp.task('html', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('Src/*.scss', ['styles']);
+	gulp.watch('Src/Scss/*.scss', ['styles']);
 	gulp.watch('Src/*.html', ['html']);
 });
