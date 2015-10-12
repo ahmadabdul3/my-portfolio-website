@@ -1,0 +1,25 @@
+.but {
+	padding: 15px 35px;
+	margin: 0 5px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	outline: none;
+}
+.but:hover {
+	cursor: pointer;
+}
+.but-wht-solid {
+	border: none;
+	background-color: white;
+	color: tomato;
+	border-radius: 2px;
+	@include transition(background-color, 0.25s, ease-in-out);
+}
+.but-wht-solid:hover {
+	background-color: tomato;
+	color: white;
+}
+.but-wht-solid:active {
+	color: black;
+	background-color: tomato;
+}

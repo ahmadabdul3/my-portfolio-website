@@ -1,0 +1,31 @@
+
+
+$red-color: #D93636;
+$orange-color: #F08000;
+$green-color: #14A825;
+
+
+.skill-lvl-box {
+	margin: 5px 10px;
+}
+.skl-lvl-icon {
+	padding: 5px;
+	border-radius: 5px;
+}
+.skl-lvl-beg {
+	background-color: $red-color;
+}
+.skl-lvl-intr {
+	background-color: $orange-color;
+}
+.skl-lvl-adv {
+	background-color: $green-color;
+}
+.skl-lvl-txt-box {
+	font-size: 20px;
+	padding: 20px 30px;
+	margin: 20px;
+	border-radius: 3px;
+	color: black;
+	color: white;
+}

@@ -15,7 +15,7 @@ gulp.task('styles', function() {
 	        title: "mistake: ",
 	        message: "<%= error.message %>"
 	    }))
-		.pipe(concat('main.css'))
+		//.pipe(concat('main.css'))
 		.pipe(gulp.dest('Prod/css/'));
 
 });
@@ -26,8 +26,15 @@ gulp.task('html', function() {
 		.pipe(gulp.dest('Prod/'));
 
 });
+gulp.task('js', function() {
+
+	return gulp.src('Src/js/*.js')
+		.pipe(gulp.dest('Prod/js/'));
+
+});
 
 gulp.task('watch', function() {
 	gulp.watch('Src/Scss/*.scss', ['styles']);
 	gulp.watch('Src/*.html', ['html']);
+	gulp.watch('Src/js/*.js', ['js']);
 });
