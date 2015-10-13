@@ -17,7 +17,8 @@
 }
 
 .info-summary-box-img {
-	@include transition(transform, 0.3s, ease-in-out);
+	@include transition(transform, 0.3s, ease);
+	@include transition(-webkit-transform, 0.3s, ease);
 }
 .info-summary-box:hover .info-summary-box-img {
 	transform: scale(1.3);

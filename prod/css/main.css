@@ -6,10 +6,14 @@
   border-radius: 2px; }
 
 .info-summary-box-img {
-  -webkit-transition: transform 0.3s ease-in-out;
-  -moz-transition: transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out; }
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -webkit-transform 0.3s ease;
+  -o-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease; }
 
 .info-summary-box:hover .info-summary-box-img {
   transform: scale(1.3);
