@@ -1,10 +1,5 @@
 
 
-$red-color: #D93636;
-$orange-color: #F08000;
-$green-color: #14A825;
-
-
 .skill-lvl-box {
 	margin: 5px 10px;
 }
@@ -13,19 +8,18 @@ $green-color: #14A825;
 	border-radius: 5px;
 }
 .skl-lvl-beg {
-	background-color: $red-color;
+	background-color: $lighter-oj;
 }
 .skl-lvl-intr {
-	background-color: $orange-color;
+	background-color: $light-oj;
 }
 .skl-lvl-adv {
-	background-color: $green-color;
+	background-color: $oj;
 }
 .skl-lvl-txt-box {
 	font-size: 20px;
-	padding: 20px 30px;
-	margin: 20px;
+	padding: 30px 50px;
+	margin: 10px;
 	border-radius: 3px;
-	color: black;
 	color: white;
 }

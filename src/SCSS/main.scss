@@ -1,11 +1,22 @@
 
+$red-color: #D93636;
+$orange-color: #F28911;
+$green-color: #14A825;
+$off-blk-txt-color: #292929;
+
+$ligher-blue: #BACEE6;
+$light-blue: #5E9DE6;
+$blue: #006AE3;
+
+$lighter-oj: #F5DCBC;
+$light-oj: #F5B664;
+$oj: #F58B00;
 
 @import 'complexTypes/complexTypes';
 @import 'complexTypes/skillLevelIcon';
 @import 'complexTypes/buttons';
 @import 'complexTypes/modalPopup';
 
-$off-blk-txt-color: #292929;
 
 html, body {
 	width: 100%;
@@ -75,8 +86,12 @@ ul {
 	width: 1000px;
 	margin: 0 auto;
 }
-#header-menu {
+#header-menu-bar {
 	background-color:rgba(0, 0, 0, 0.5);
+	padding: 40px 0;
+}
+#header-menu-nav {
+	
 }
 #header-body {
 	width: 97%;
@@ -96,6 +111,11 @@ header {
 	width: 100%;
 	
 	z-index: -1;
+}
+#mini-projects {
+	background-color: #ccc;
+	background-color: $blue;
+	color: white;
 }
 .center {
 	text-align: center;
@@ -126,6 +146,12 @@ header {
 }
 .sect-pad-40 {
 	padding: 40px 0;
+}
+.sect-pad-60 {
+	padding: 60px 0;
+}
+.sect-pad-80 {
+	padding: 80px 0;
 }
 .sect-pad-100 {
 	padding: 100px 0;
@@ -222,11 +248,41 @@ header {
 		margin-top: 5px;
 		margin-bottom: 5px;
 	}
+	
+}
+@media (min-width: 0px) and (max-width: 700px) {
+	#header-menu-nav {
+		display: none;
+	}
+	#header-menu-bar {
+		padding: 20px 0;
+	}
 	.vis-lg {
 		display: none;
 	}
-	.but {
-		padding: 35px 0;
+	h1, h2, h3, h4, h5, h6, p {
+		margin: 20px 0;
 	}
+	h1, h2, h3 {
+		font-weight: bold;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1em;
+	}
+	.large-h3 {
+		font-size: 2.5em;
+	}
+	.large-h4 {
+		font-size: 1em;
+	}	
 }
+
+
+
 

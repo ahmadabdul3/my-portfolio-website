@@ -1,13 +1,9 @@
 .info-summary-box {
   padding: 5px;
   margin: 10px;
-  color: white;
-  background-color: black;
-  border-radius: 2px;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out; }
+  color: #006AE3;
+  background-color: white;
+  border-radius: 2px; }
 
 .info-summary-box-img {
   -webkit-transition: transform 0.3s ease-in-out;
@@ -20,19 +16,18 @@
 
 .info-summary-box:hover {
   /*transform: rotate(45deg);*/
-  cursor: pointer;
-  background-color: teal; }
+  cursor: pointer; }
 
 .info-summary-inner-box {
   text-align: center;
   margin: auto;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 200px;
   overflow: hidden; }
 
 .info-summary-inner-box-img-box {
   text-align: center;
-  max-height: 100px;
+  max-height: 150px;
   overflow: hidden; }
 
 @media (min-width: 0px) and (max-width: 400px) {
@@ -47,24 +42,23 @@
   border-radius: 5px; }
 
 .skl-lvl-beg {
-  background-color: #D93636; }
+  background-color: #F5DCBC; }
 
 .skl-lvl-intr {
-  background-color: #F08000; }
+  background-color: #F5B664; }
 
 .skl-lvl-adv {
-  background-color: #14A825; }
+  background-color: #F58B00; }
 
 .skl-lvl-txt-box {
   font-size: 20px;
-  padding: 20px 30px;
-  margin: 20px;
+  padding: 30px 50px;
+  margin: 10px;
   border-radius: 3px;
-  color: black;
   color: white; }
 
 .but {
-  padding: 15px 35px;
+  padding: 20px 45px;
   margin: 0 5px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -73,23 +67,45 @@
 .but:hover {
   cursor: pointer; }
 
-.but-wht-solid {
+.but-wht-solid-oj {
   border: none;
   background-color: white;
-  color: tomato;
+  color: #F28911;
   border-radius: 2px;
   -webkit-transition: background-color 0.25s ease-in-out;
   -moz-transition: background-color 0.25s ease-in-out;
   -o-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out; }
 
-.but-wht-solid:hover {
-  background-color: tomato;
+.but-wht-solid-oj:hover {
+  background-color: #F28911;
   color: white; }
 
-.but-wht-solid:active {
+.but-wht-solid-oj:active {
   color: black;
-  background-color: tomato; }
+  background-color: #F28911; }
+
+.but-wht-solid-blue {
+  border: none;
+  background-color: white;
+  color: #006AE3;
+  border-radius: 2px;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out; }
+
+.but-wht-solid-blue:hover {
+  background-color: #006AE3;
+  color: white; }
+
+.but-wht-solid-blue:active {
+  color: black;
+  background-color: #006AE3; }
+
+@media (min-width: 0px) and (max-width: 700px) {
+  .but {
+    padding: 15px 35px; } }
 
 #modal-bg {
   display: none;
@@ -180,8 +196,9 @@ ul {
   width: 1000px;
   margin: 0 auto; }
 
-#header-menu {
-  background-color: rgba(0, 0, 0, 0.5); }
+#header-menu-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px 0; }
 
 #header-body {
   width: 97%; }
@@ -200,6 +217,11 @@ header {
   left: 0;
   width: 100%;
   z-index: -1; }
+
+#mini-projects {
+  background-color: #ccc;
+  background-color: #006AE3;
+  color: white; }
 
 .center {
   text-align: center; }
@@ -230,6 +252,12 @@ header {
 
 .sect-pad-40 {
   padding: 40px 0; }
+
+.sect-pad-60 {
+  padding: 60px 0; }
+
+.sect-pad-80 {
+  padding: 80px 0; }
 
 .sect-pad-100 {
   padding: 100px 0; }
@@ -322,8 +350,26 @@ header {
     width: 95%;
     margin: auto;
     margin-top: 5px;
-    margin-bottom: 5px; }
+    margin-bottom: 5px; } }
+
+@media (min-width: 0px) and (max-width: 700px) {
+  #header-menu-nav {
+    display: none; }
+  #header-menu-bar {
+    padding: 20px 0; }
   .vis-lg {
     display: none; }
-  .but {
-    padding: 35px 0; } }
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 20px 0; }
+  h1, h2, h3 {
+    font-weight: bold; }
+  h1 {
+    font-size: 2em; }
+  h2 {
+    font-size: 1.5em; }
+  h3 {
+    font-size: 1em; }
+  .large-h3 {
+    font-size: 2.5em; }
+  .large-h4 {
+    font-size: 1em; } }

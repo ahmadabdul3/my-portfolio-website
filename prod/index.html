@@ -4,6 +4,7 @@
 	<title>
 		Abdul's Portfolio
 	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="cssReset/cssReset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -18,13 +19,13 @@
 	<div class="box center" id="site-main-box">
 			<header class="center">
 				<div class="flt-left" style="height: 0;">
-					<section id="header-menu" class="sect-pad-40">
+					<section id="header-menu-bar">
 						<div class="site-width">
 							<div class="col-mid col-1-2 left">
 								<h1>Title stuff</h1>
 							</div>
-							<div class="col-mid col-1-2 right">
-								<ul>
+							<nav class="col-mid col-1-2 right">
+								<ul id="header-menu-nav">
 									<li class="col-mid link">
 										page
 									</li>
@@ -38,25 +39,25 @@
 										page
 									</li>
 								</ul>
-							</div>
+							</nav>
 						</div>
 					</section>
 				</div>
-					<div id="header-body" class="col-mid-const">
-						<div>
-							<h3 class="large-h3">
-								llorem ipsum dolor sit
-							</h3>
-							<h4 class="large-h4">
-								ipsum llorem ipsum dolor sitdolor dolor
-							</h4>
-						</div>
-						<button class="but but-wht-solid col-mid">button</button>
-						<button class="but but-wht-solid col-mid">button</button>
+				<div id="header-body" class="col-mid-const">
+					<div>
+						<h3 class="large-h3">
+							llorem ipsum dolor sit
+						</h3>
+						<h4 class="large-h4">
+							ipsum llorem ipsum dolor sitdolor dolor
+						</h4>
 					</div>
-					<div class="vert-mid-hack"></div>
+					<button class="but but-wht-solid-blue col-mid-const">button</button>
+					<button class="but but-wht-solid-blue col-mid-const">button</button>
+				</div>
+				<div class="vert-mid-hack"></div>
 			</header>
-			<section class="sect-pad-40">
+			<section class="sect-pad-60">
 				<div class="center">
 					<h3>My skills and likes</h3>
 					<ul>
@@ -80,43 +81,43 @@
 						</li>
 					</ul>
 					<section class="sect-pad-t-20">
-						<div>
+						<div class="">
 							<label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
 								Javascript
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
 								AngularJs
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
 								Gulp
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
 								HTML
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
 								CSS/SASS
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
 								NodeJs
 							</label>
 						</div>
 						<div class="vis-lg">
 							<label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
 								ASP.NET-MVC
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
 								ExpressJs
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
 								Entity Framework
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
 								C#/Linq
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
 								UI/UX
-							</label>
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
+							</label><!--
+							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
 								OOD
 							</label>
 							
@@ -124,7 +125,7 @@
 					</section>
 				</div>
 			</section>
-			<section class='sect-pad-40'>
+			<section id='mini-projects' class='sect-pad-60'>
 				<div class="website-width center">
 					<div>
 						<h3>Mini projects</h3>
@@ -133,44 +134,48 @@
 					<div class="info-summary-box col-top">
 						<div class="info-summary-inner-box">
 							<div class="info-summary-inner-box-img-box">
-								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="https://coolstuffiknow.files.wordpress.com/2012/04/6320cool20perspective20pic.jpg">
+								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="http://p1.pichost.me/i/39/1624709.jpg">
 							</div>
 							<div>
-								<p class='info-summary-box-p'>Calendar</p>
+								<p class='info-summary-box-p'>- Calendar -</p>
 							</div>
 						</div>
 					</div>
 					<div class="info-summary-box col-top">
 						<div class="info-summary-inner-box">
 							<div class="info-summary-inner-box-img-box">
-								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="https://coolstuffiknow.files.wordpress.com/2012/04/6320cool20perspective20pic.jpg">
+								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="http://www.freedigitalphotos.net/images/category-images/382.jpg">
 							</div>
 							<div>
-								<p class='info-summary-box-p'>Fiddle within Fiddle</p>
+								<p class='info-summary-box-p'>- Fiddle within Fiddle -</p>
 							</div>
 						</div>
 					</div>
 					<div class="info-summary-box col-top">
 						<div class="info-summary-inner-box">
 							<div class="info-summary-inner-box-img-box">
-								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="https://coolstuffiknow.files.wordpress.com/2012/04/6320cool20perspective20pic.jpg">
+								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="http://blog.miroslav-dimitrov.net/wp-content/uploads/2011/03/lancia-rally-sketch-04.jpg">
 							</div>
 							<div>
-								<p class='info-summary-box-p'>Sketch Box</p>
+								<p class='info-summary-box-p'>- Sketch Box -</p>
 							</div>
 						</div>
 					</div>
 					<div class="info-summary-box col-top">
 						<div class="info-summary-inner-box">
 							<div class="info-summary-inner-box-img-box">
-								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="https://coolstuffiknow.files.wordpress.com/2012/04/6320cool20perspective20pic.jpg">
+								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="http://www.cardesignfetish.com/wp-content/uploads/2009/02/21.jpg">
 							</div>
 							<div>
-								<p class='info-summary-box-p'>text text text text</p>
+								<p class='info-summary-box-p'>- text text text text -</p>
 							</div>
 						</div>
 					</div>
 				</div>
+			</section>
+			<section class='sect-pad-60' style='background-color: black;'>
+
+  
 			</section>
 	</div>
 

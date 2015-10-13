@@ -1,4 +1,6 @@
 
+
+
 @mixin transition($property, $duration, $function) {
   -webkit-transition: $property $duration $function;
      -moz-transition: $property $duration $function;
@@ -9,10 +11,9 @@
 .info-summary-box {
 	padding: 5px;
 	margin: 10px;
-	color: white;
-	background-color: black;
+	color: $blue;
+	background-color: white;
 	border-radius: 2px;
-	@include transition(background-color, 0.3s, ease-in-out);
 }
 
 .info-summary-box-img {
@@ -25,19 +26,18 @@
 .info-summary-box:hover {
 	/*transform: rotate(45deg);*/
 	cursor: pointer;
-	background-color: teal;
 }
 
 .info-summary-inner-box {
 	text-align: center;
 	margin: auto;
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 200px;
 	overflow: hidden;
 }
 .info-summary-inner-box-img-box {
 	text-align: center;
-	max-height: 100px;
+	max-height: 150px;
 	overflow: hidden;
 }
 @media (min-width: 0px) and (max-width: 400px) {
