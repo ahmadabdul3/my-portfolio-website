@@ -1,9 +1,26 @@
 .info-summary-box {
-  padding: 5px;
+  padding: 10px;
   margin: 10px;
   color: #006AE3;
+  background-color: black;
+  border-radius: 2px;
+  position: relative; }
+
+.info-summary-box-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 0;
   background-color: white;
-  border-radius: 2px; }
+  z-index: 2;
+  -webkit-transition: height 0.8s ease;
+  -moz-transition: height 0.8s ease;
+  -o-transition: height 0.8s ease;
+  transition: height 0.8s ease; }
+
+.info-summary-box:hover .info-summary-box-bg {
+  height: 270px; }
 
 .info-summary-box-img {
   -webkit-transition: transform 0.3s ease;
@@ -28,13 +45,15 @@
 .info-summary-inner-box {
   text-align: center;
   margin: auto;
-  width: 250px;
-  height: 200px;
-  overflow: hidden; }
+  width: 300px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  z-index: 5; }
 
 .info-summary-inner-box-img-box {
   text-align: center;
-  height: 150px;
+  height: 205px;
   overflow: hidden; }
 
 @media (min-width: 0px) and (max-width: 400px) {
