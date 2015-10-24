@@ -8,8 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="cssReset/cssReset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script type="text/javascript" src="js/angMainController.js"></script>
+	<script type="text/javascript" src="js/angHeaderSectionService.js"></script>
+	<script type="text/javascript" src="js/angSkillsSectionService.js"></script>
+	<script type="text/javascript" src="js/angMiniProjectsSectionService.js"></script>
 </head>
-<body>
+<body data-ng-app="PortfolioMain" data-ng-controller="MainController as MainCtrl">
 	<div id='modal-bg'></div>
 	<div id='modal-box-bg'>
 		<div id='modal-box'>
@@ -22,21 +27,12 @@
 					<section id="header-menu-bar">
 						<div class="site-width">
 							<div class="col-mid col-1-2 left">
-								<h1>Title stuff</h1>
+								<h1>{{ MainCtrl.HeaderSectionH1 }}</h1>
 							</div>
 							<nav class="col-mid col-1-2 right">
 								<ul id="header-menu-nav">
-									<li class="col-mid link">
-										page
-									</li>
-									<li class="col-mid link">
-										page
-									</li>
-									<li class="col-mid link">
-										page
-									</li>
-									<li class="col-mid link">
-										page
+									<li data-ng-repeat='link in MainCtrl.HeaderSectionNavigationLinks' class="col-mid link">
+										{{ link }}
 									</li>
 								</ul>
 							</nav>
@@ -46,10 +42,10 @@
 				<div id="header-body" class="col-mid-const">
 					<div>
 						<h3 class="large-h3">
-							llorem ipsum dolor sit
+							{{ MainCtrl.HeaderSectionH3 }}
 						</h3>
 						<h4 class="large-h4">
-							ipsum llorem ipsum dolor sitdolor dolor
+							{{ MainCtrl.HeaderSectionH4 }}
 						</h4>
 					</div>
 					<button class="but but-wht-solid-blue col-mid-const">button</button>
@@ -59,68 +55,25 @@
 			</header>
 			<section class="sect-pad-60">
 				<div class="center">
-					<h3>My skills and likes</h3>
+					<h3>{{ MainCtrl.SkillsSectionH3 }}</h3>
 					<ul>
-						<li class="col-mid-const skill-lvl-box">
-							<div class="col-mid-const skl-lvl-icon skl-lvl-beg"></div>
+						<li data-ng-repeat='skill in MainCtrl.SkillsSectionTitles' class="col-mid-const skill-lvl-box">
+							<div class="col-mid-const skl-lvl-icon" data-ng-class="skill.ngclass"></div>
 							<label class="col-mid-const">
-								Beginner
-							</label>
-						</li>
-						<li class="col-mid-const skill-lvl-box">
-							<div class="col-mid-const skl-lvl-icon skl-lvl-intr"></div>
-							<label class="col-mid-const">
-								Intermediate
-							</label>
-						</li>
-						<li class="col-mid-const skill-lvl-box">
-							<div class="col-mid-const skl-lvl-icon skl-lvl-adv"></div>
-							<label class="col-mid-const">
-								Advanced
+								{{ skill.text }}
 							</label>
 						</li>
 					</ul>
 					<section class="sect-pad-t-20">
 						<div class="">
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
-								Javascript
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
-								AngularJs
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
-								Gulp
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
-								HTML
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
-								CSS/SASS
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
-								NodeJs
+							<label data-ng-repeat='item in MainCtrl.SkillsSectionItemsOne' class="col-mid-const skl-lvl-txt-box" data-ng-class="item.ngclass">
+								{{ item.text }}
 							</label>
 						</div>
 						<div class="vis-lg">
-							<label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
-								ASP.NET-MVC
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-beg">
-								ExpressJs
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
-								Entity Framework
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
-								C#/Linq
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-intr">
-								UI/UX
-							</label><!--
-							--><label class="col-mid-const skl-lvl-txt-box skl-lvl-adv">
-								OOD
+							<label data-ng-repeat='item in MainCtrl.SkillsSectionItemsTwo' class="col-mid-const skl-lvl-txt-box" data-ng-class="item.ngclass">
+								{{ item.text }}
 							</label>
-							
 						</div>
 					</section>
 				</div>
@@ -128,50 +81,17 @@
 			<section id='mini-projects' class='sect-pad-60'>
 				<div class="website-width center">
 					<div>
-						<h3>Mini projects</h3>
-						<h4>Interesting and quick (what I like to call) studies</h4>
+						<h3>{{ MainCtrl.MiniProjectsSectionH3 }}</h3>
+						<h4>{{ MainCtrl.MiniProjectsSectionH4 }}</h4>
 					</div>
-					<div class="info-summary-box col-top">
+					<div data-ng-repeat='item in MainCtrl.MiniProjectsSectionItems' class="info-summary-box col-top">
 						<div class="info-summary-box-bg"></div>
 						<div class="info-summary-inner-box">
 							<div class="info-summary-inner-box-img-box">
-								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="http://p1.pichost.me/i/39/1624709.jpg">
+								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="{{item.imageSource}}">
 							</div>
 							<div>
-								<p class='info-summary-box-p'>- Calendar -</p>
-							</div>
-						</div>
-					</div>
-					<div class="info-summary-box col-top">
-						<div class="info-summary-box-bg"></div>
-						<div class="info-summary-inner-box">
-							<div class="info-summary-inner-box-img-box">
-								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="http://www.freedigitalphotos.net/images/category-images/382.jpg">
-							</div>
-							<div>
-								<p class='info-summary-box-p'>- Fiddle within Fiddle -</p>
-							</div>
-						</div>
-					</div>
-					<div class="info-summary-box col-top">
-						<div class="info-summary-box-bg"></div>
-						<div class="info-summary-inner-box">
-							<div class="info-summary-inner-box-img-box">
-								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="http://blog.miroslav-dimitrov.net/wp-content/uploads/2011/03/lancia-rally-sketch-04.jpg">
-							</div>
-							<div>
-								<p class='info-summary-box-p'>- Sketch Box -</p>
-							</div>
-						</div>
-					</div>
-					<div class="info-summary-box col-top">
-						<div class="info-summary-box-bg"></div>
-						<div class="info-summary-inner-box">
-							<div class="info-summary-inner-box-img-box">
-								<img class="gen-img info-summary-box-img" alt="Can't find image :(" src="http://www.cardesignfetish.com/wp-content/uploads/2009/02/21.jpg">
-							</div>
-							<div>
-								<p class='info-summary-box-p'>- text text text text -</p>
+								<p class='info-summary-box-p'>{{ item.text }}</p>
 							</div>
 						</div>
 					</div>

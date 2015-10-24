@@ -6,7 +6,7 @@ $(document).ready(function() {
 		hideModal();
 	});
 	$('.skl-lvl-txt-box').on('mouseover', function() {
-		handleSkillLevelTextBoxMouseEvent($(this), 0.1);
+		handleSkillLevelTextBoxMouseEvent($(this), 0);
 	});
 	$('.skl-lvl-txt-box').on('mouseleave', function() {
 		handleSkillLevelTextBoxMouseEvent($(this), 1);
@@ -15,14 +15,14 @@ $(document).ready(function() {
 
 });
 
-function handleSkillLevelTextBoxMouseEvent(self, animationProperty) {
+function handleSkillLevelTextBoxMouseEvent(self, animPropValue) {
 	var classes = getSkillLevelClasses();
 	var skillLevelClass = matchClassAndReturn($(self).attr('class'), classes);
 	if (skillLevelClass !== 'null') {
 		for (var i = 0; i < 3; i++) {
 			var tempClass = classes[i];
 			if (skillLevelClass !== tempClass) {
-				$('.' + tempClass).animate({opacity: animationProperty}, 500);
+				$('.' + tempClass).animate({opacity: animPropValue}, 500);
 			}
 		}
 	}

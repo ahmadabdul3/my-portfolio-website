@@ -1,8 +1,8 @@
 .info-summary-box {
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
   color: #006AE3;
-  background-color: black;
+  background-color: white;
   border-radius: 2px;
   position: relative; }
 
@@ -10,9 +10,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 320px;
+  width: 310px;
   height: 0;
-  background-color: white;
+  background-color: black;
   z-index: 2;
   -webkit-transition: height 0.8s ease;
   -moz-transition: height 0.8s ease;
@@ -20,7 +20,7 @@
   transition: height 0.8s ease; }
 
 .info-summary-box:hover .info-summary-box-bg {
-  height: 270px; }
+  height: 260px; }
 
 .info-summary-box-img {
   -webkit-transition: transform 0.3s ease;
@@ -342,7 +342,7 @@ header {
 
 .link:hover {
   cursor: pointer;
-  color: teal; }
+  color: #F58B00; }
 
 .flt-lft {
   float: left; }
