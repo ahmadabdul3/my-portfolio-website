@@ -67,12 +67,14 @@
 					<section class="sect-pad-t-20">
 						<div class="">
 							<label data-ng-repeat='item in MainCtrl.SkillsSectionItemsOne' class="col-mid-const skl-lvl-txt-box" data-ng-class="item.ngclass">
-								{{ item.text }}
+								<div class="col-mid-const">{{ item.text }}</div>
+								<div class="vert-mid-hack"></div>
 							</label>
 						</div>
 						<div class="vis-lg">
 							<label data-ng-repeat='item in MainCtrl.SkillsSectionItemsTwo' class="col-mid-const skl-lvl-txt-box" data-ng-class="item.ngclass">
-								{{ item.text }}
+								<div class="col-mid-const">{{ item.text }}</div>
+								<div class="vert-mid-hack"></div>
 							</label>
 						</div>
 					</section>
